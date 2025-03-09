@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    overflow: hidden;
+    position: relative;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 50px 20px;
+    color: white;
+}
+
+.carousel {
+    width: 90%;
+    max-width: 350px;
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 2s ease-in-out;
+}
+
+/* Estilo para el nuevo botón */
+.new-button {
+    background-color: #ff4f82;  /* Color de fondo rosado */
+    color: white;               /* Color del texto */
+    border: none;               /* Sin borde */
+    padding: 15px 30px;         /* Relleno más grande para un botón más atractivo */
+    font-size: 18px;            /* Tamaño de la fuente */
+    font-weight: bold;          /* Hacer el texto más destacado */
+    border-radius: 50px;        /* Bordes completamente redondeados */
+    text-transform: uppercase;  /* Texto en mayúsculas */
+    letter-spacing: 2px;        /* Espaciado entre letras */
+    cursor: pointer;           /* Cambia el cursor al pasar por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra sutil */
+    transition: all 0.3s ease;  /* Transición suave */
+}
+
+/* Efecto hover cuando el usuario pasa el cursor por encima */
+.new-button:hover {
+    background-color: #ff2d5d;  /* Color de fondo más intenso cuando el cursor pasa por encima */
+    transform: translateY(-2px); /* Efecto de "flotar" al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Sombra más grande */
+}
+
+/* Efecto de clic en el botón */
+.new-button:active {
+    transform: translateY(2px);  /* El botón "se presiona" cuando se hace clic */
+}
+
+.hidden {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        height: 250px;
+    }
+}
